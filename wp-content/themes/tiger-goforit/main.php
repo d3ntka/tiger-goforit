@@ -9,9 +9,18 @@
 get_header();
 ?>
 
-<section id="hero">
-    <div class="container">
-
+<section id="hero" class="hero d-flex justify-content-center align-items-center">
+    <div class="pasek1"></div>
+    <div class="pasek2"></div>
+    <div class="pasek3"></div>
+    <div class="pasek4"></div>
+    <div class="pasek5"></div>
+    <div class="pasek6"></div>
+    <div class="pasek7"></div>
+    <div class="hero__content">
+        <img class="hero__content--logo"src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_big.png" alt="logo">
+        <img class="hero__content--influ-1"src="<?php echo get_template_directory_uri(); ?>/assets/img/influ_1.png" alt="logo">
+        <img class="hero__content--influ-2"src="<?php echo get_template_directory_uri(); ?>/assets/img/influ_1.png" alt="logo">
     </div>
 </section>
 <section id="turniej" class="turniej">

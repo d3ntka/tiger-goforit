@@ -13,7 +13,11 @@ body {
     letter-spacing: 0.03rem;
     font-weight: 700;
     color: #fff;
-    background-color: $dark;
+    // background-color: $dark;
+    background-image: url("../img/bg1.webp");
+    background-repeat: repeat-y;
+    background-position-x: center;
+    background-size: auto;
 }
 
 
@@ -69,4 +73,11 @@ section{
         transform: translateX(-50%);
         z-index: -1;
     }
+}
+
+.bg{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
 }
