@@ -2,7 +2,10 @@
   min-height: 70rem;
   position: relative;
   &__content {
-    max-width: 80%;
+    max-width: 130rem;
+    @include media-breakpoint-down(lg){
+      max-width: 90%;
+    }
     width: 100%;
     position: absolute;
     z-index: 20;
@@ -11,25 +14,31 @@
     transform: translateX(-50%);
     height: 100%;
     &--logo {
-        max-width: 100%;
+      max-width: 100%;
       position: absolute;
       left: 50%;
       top: 40%;
       transform: translate(-50%, -50%);
     }
     &--influ-1 {
-    max-width: 100%;
+      max-width: 100%;
+      @include media-breakpoint-down(lg) {
+        width: 40vw;
+      }
       position: absolute;
       left: 0;
       bottom: 0;
-    //   transform: translateX(0);
+      //   transform: translateX(0);
     }
     &--influ-2 {
-    max-width: 100%;
+      max-width: 100%;
+      @include media-breakpoint-down(lg) {
+        width: 40vw;
+      }
       position: absolute;
       right: 0;
       bottom: 0;
-      transform: scaleX(-1);
+      // transform: scaleX(-1);
     }
   }
 }
@@ -84,18 +93,32 @@
 
 .turniej {
   @extend .bg;
-  background: url("../img/bg_turniej.webp");
+  background: linear-gradient(rgba($dark,0.9)) , url("../img/bg_turniej.webp");
   background-position: center center;
   @include media-breakpoint-down(md) {
     background-position: 20% center;
   }
   position: relative;
-  min-height: 80rem;
+  min-height: 90rem;
+  padding-bottom: 5rem;
   color: #fff;
   // background-color: $dark;
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22rem;
+    background-size: auto;
+    background-image: url("../img/turniej_acc.png");
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -107,6 +130,37 @@
     background-image: url("../img/tiger_slide.png");
     background-repeat: repeat-x;
     animation: slide 60s linear infinite;
+    z-index: 30;
+  }
+  &__content{
+    padding-top: 25rem;
+    padding-bottom: 5rem;
+    position: relative;
+    z-index: 50;
+    span{
+      &::after{
+        background-color: $magenta;
+        width: 100%;
+      }
+    }
+    .btn {
+      margin-top:7rem
+    }
+  }
+  &__triangles-1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+  &__triangles-2{
+    position: absolute;
+    width: 80%;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 51;
   }
 }
 
@@ -124,12 +178,15 @@
   @extend .bg;
   background-image: url("../img/bg_prizes.webp");
   position: relative;
+  padding-bottom: 5rem;
+  z-index: 30;
   // background-color: $orange;
   h2 {
     color: #fff;
     // position: relative;
     text-align: center;
-    padding: 5rem 0;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
   }
   &__row {
     display: flex;
@@ -186,12 +243,14 @@
 .quali {
   @extend .bg;
   background-image: url("../img/bg_quali.webp");
-  min-height: 50rem;
+  min-height: 68rem;
   position: relative;
+  padding-bottom: 5rem;
 
   h2 {
     text-align: center;
-    padding: 5rem 0;
+    padding-top: 11rem;
+    padding-bottom: 14rem;
     .bottom-line {
       &::after {
         background-color: $purple;

@@ -25,7 +25,9 @@
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container d-flex justify-align-center align-items-center">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+					
+					<!-- <?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
 
 						if ( ! empty( $header_logo ) ) :
@@ -35,7 +37,7 @@
 						else :
 							echo esc_attr( get_bloginfo( 'name', 'display' ) );
 						endif;
-					?>
+					?> -->
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'tiger-goforit' ); ?>">

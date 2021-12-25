@@ -18,15 +18,19 @@ get_header();
     <div class="pasek6"></div>
     <div class="pasek7"></div>
     <div class="hero__content">
-        <img class="hero__content--logo"src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_big.png" alt="logo">
         <img class="hero__content--influ-1"src="<?php echo get_template_directory_uri(); ?>/assets/img/influ_1.png" alt="logo">
-        <img class="hero__content--influ-2"src="<?php echo get_template_directory_uri(); ?>/assets/img/influ_1.png" alt="logo">
+        <img class="hero__content--influ-2"src="<?php echo get_template_directory_uri(); ?>/assets/img/influ_2.png" alt="logo">
+        <img class="hero__content--logo"src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_big.png" alt="logo">
     </div>
 </section>
+
 <section id="turniej" class="turniej">
+    <img class="turniej__triangles-1"src="<?php echo get_template_directory_uri(); ?>/assets/img/triangles_1.png" alt="logo">
+    <img class="turniej__triangles-2"src="<?php echo get_template_directory_uri(); ?>/assets/img/triangles_2.png" alt="logo">
+
     <div class="container turniej__content">
         <?php if ($s2_title = get_field('s2_title')) : ?>
-            <div class="">
+            <div class="turniej__title">
                 <h1>
                     <?php echo esc_html($s2_title); ?>
                 </h1>
@@ -34,7 +38,9 @@ get_header();
         <?php endif; ?>
         <?php if ($s2_subtitle = get_field('s2_subtitle')) : ?>
             <div>
-                <?php echo esc_html($s2_subtitle); ?>
+                <span class="bottom-line">
+                    <?php echo esc_html($s2_subtitle); ?>
+                </span>
             </div>
         <?php endif; ?>
         <?php
@@ -55,7 +61,7 @@ get_header();
         <?php if ($s3_title = get_field('s3_title')) : ?>
             <div>
                 <h2>
-                    <span class="bottom-line">
+                    <span class="bottom-line white-triangle">
                         <?php echo esc_html($s3_title); ?>
                     </span>
                 </h2>
@@ -100,7 +106,7 @@ get_header();
     <div class="container">
         <?php if ($s4_title = get_field('s4_title')) : ?>
             <h2>
-                <span class="bottom-line">
+                <span class="bottom-line white-triangle">
                     <?php echo esc_html($s4_title); ?>
                 </span>
             </h2>
