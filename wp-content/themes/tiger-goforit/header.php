@@ -23,6 +23,8 @@
 <div id="wrapper">
 	<header>
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+			<div class="tigerki tigerki_1"></div>
+			<div class="tigerki tigerki_2"></div>
 			<div class="container d-flex justify-align-center align-items-center">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />

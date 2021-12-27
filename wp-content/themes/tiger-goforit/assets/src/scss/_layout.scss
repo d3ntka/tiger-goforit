@@ -133,7 +133,7 @@
     z-index: 30;
   }
   &__content{
-    padding-top: 25rem;
+    padding-top: 23rem;
     padding-bottom: 5rem;
     position: relative;
     z-index: 50;
@@ -146,6 +146,11 @@
     .btn {
       margin-top:7rem
     }
+  }
+  &__txt{
+    font-weight: 500;
+    padding-top: 2rem;
+    font-size: 2rem;
   }
   &__triangles-1{
     position: absolute;
@@ -209,8 +214,7 @@
     position: relative;
     border: none;
     margin-bottom: 2rem;
-    &__wrap {
-    }
+
     &__img {
       height: 65%;
       display: flex;
@@ -246,6 +250,7 @@
   min-height: 68rem;
   position: relative;
   padding-bottom: 5rem;
+  counter-reset: quali;
 
   h2 {
     text-align: center;
@@ -259,10 +264,28 @@
   }
   &-box {
     background-color: #fff;
-    border-radius: 2.5rem 2rem;
+    border-radius: 3rem;
     width: 26rem;
     padding: 3rem;
     height: 18rem;
+    position: relative;
+    &::after{
+      counter-increment: quali;
+      content: counter(quali);
+      background-color: $dark;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      width: 4.5rem;
+      height: 4.5rem;
+      top: 2rem;
+      right: 2rem;
+      border-radius: 50%;
+      font-size: 2.5rem;
+    }
+
     .btn {
       font-size: 1.4rem;
       width: 16rem;
@@ -275,6 +298,7 @@
     }
     &__body {
       padding-bottom: 2.4rem;
+
     }
     &__title {
       font-size: 2.5rem;
@@ -297,5 +321,67 @@
         background-color: #fff;
       }
     }
+  }
+}
+
+.footer_tiger{
+  position: relative;
+
+}
+.tigerki{
+  position: absolute;
+  width: 100%;
+    z-index: 50;
+    height: 100%;
+  &::after{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // z-index: 500;
+  }
+}
+.tigerki_1{
+  top: 0;
+  left: 30%;
+  width: 68.1rem;
+  height: 102.5rem;
+  background-image: url("../img/tiger_hero_l.png");
+  transform: translate(-130%,0);
+}
+.tigerki_2{
+  top: 0;
+  right: 30%;
+  width: 53.2rem;
+  height: 110.7rem;
+  background-image: url("../img/tiger_hero_r.png");
+  transform: translate(145%,0);
+}
+.tigerki_3{
+  bottom: 0;
+  left: 30%;
+  width: 52.4rem;
+  height: 71.4rem;
+  background-image: url("../img/tiger_l1.png");
+  transform: translate(-150%,0);
+}
+.tigerki_4{
+  bottom: 0;
+  right: 30%;
+  width: 63.8rem;
+  height: 78rem;
+  background-image: url("../img/tiger_r1.png");
+  transform: translate(130%,25%);
+}
+.tigerki_5{
+  bottom: 0;
+  width: 27.6rem;
+  height: 47.7rem;
+  background-image: url("../img/tiger_l2.png");
+  left: 0;
+  @media (max-width: 1919px) {
+    left: 20%;
+    transform: translate(-150%,0);
+    
   }
 }

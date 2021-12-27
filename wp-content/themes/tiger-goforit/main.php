@@ -43,6 +43,13 @@ get_header();
                 </span>
             </div>
         <?php endif; ?>
+        <?php if ($s2_txt = get_field('s2_txt')) : ?>
+            <div class="turniej__txt">
+                <p class="">
+                    <?php echo $s2_txt; ?>
+                </p>
+            </div>
+        <?php endif; ?>
         <?php
         $link = get_field('s2_button');
         if ($link) :
@@ -57,6 +64,8 @@ get_header();
     </div>
 </section>
 <section id="nagrody" class="nagrody">
+    <div class="tigerki tigerki_3"></div>
+    <div class="tigerki tigerki_4"></div>
     <div class="container">
         <?php if ($s3_title = get_field('s3_title')) : ?>
             <div>

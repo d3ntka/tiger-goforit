@@ -47,6 +47,7 @@ section{
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+    transition: 0.2s ease-in-out;
     &:hover,&:focus,&:active{
         outline: none;
         color: #fff;
@@ -55,6 +56,11 @@ section{
 .btn-primary{
     &:hover{
         background-color: $secondary;
+    }
+}
+.btn-secondary{
+    &:hover{
+        background-color: $orange;
     }
 }
 
@@ -96,4 +102,13 @@ section{
     background-position: center center;
     background-size: cover;
 
+}
+
+#footer{
+    // position: relative;
+}
+
+#header .menu-item>a{
+    position: relative;
+    z-index: 1000;
 }

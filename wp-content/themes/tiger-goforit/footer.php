@@ -14,11 +14,15 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<footer id="footer">
+		<footer id="footer" class="footer_tiger">
+			<!-- <div class="footer_tiger"> -->
+				<div class="tigerki tigerki_5"></div>
+			<!-- </div> -->
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'tiger-goforit' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
+				<div class="row align-items-center justify-content-center">
+					<div class="py-5 d-flex align-items-center justify-content-center">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+
 					</div>
 
 					<?php
