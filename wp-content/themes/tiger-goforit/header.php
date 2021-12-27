@@ -26,7 +26,8 @@
 			<div class="tigerki tigerki_1"></div>
 			<div class="tigerki tigerki_2"></div>
 			<div class="container d-flex justify-align-center align-items-center">
-				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				
+				<a class="navbar-brand order-md-2" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 					
 					<!-- <?php
@@ -46,14 +47,29 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div id="navbar" class="collapse navbar-collapse">
+				<div id="navbar" class="collapse navbar-collapse navbar-collapse-left order-md-0">
+					<?php
+						// Loading WordPress Custom Menu (theme_location).
+						wp_nav_menu(
+							array(
+								'theme_location' => 'left-menu',
+								'container'      => '',
+								'menu_class'     => 'navbar-nav d-flex align-items-center',
+								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+								'walker'         => new WP_Bootstrap_Navwalker(),
+							)
+						);
+					?>
+				</div><!-- /.navbar-collapse -->
+
+				<div id="navbar" class="collapse navbar-collapse order-md-5">
 					<?php
 						// Loading WordPress Custom Menu (theme_location).
 						wp_nav_menu(
 							array(
 								'theme_location' => 'main-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav d-flex align-items-center ms-auto',
+								'menu_class'     => 'navbar-nav d-flex align-items-center',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)

@@ -6,6 +6,9 @@
     font-size: 1.7rem;
     a{
         padding: 1rem 3rem;
+        @include media-breakpoint-only(md){
+          padding: 1rem 1.5rem;
+        }
         white-space: nowrap;
     }
     &.btn {
@@ -20,5 +23,22 @@
         }
       }
     }
+  }
+}
+
+
+#footer{
+  // position: relative;
+}
+
+#header .menu-item>a{
+  position: relative;
+  z-index: 1000;
+}
+
+
+@media (min-width: 768px){
+  .navbar-expand-md .navbar-collapse-left {
+      justify-content: end;
   }
 }
