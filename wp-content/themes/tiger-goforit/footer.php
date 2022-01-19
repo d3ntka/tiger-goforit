@@ -34,7 +34,7 @@
 					<?php
 					$options_regulamin = get_field( 'options_regulamin', 'options' );
 					if ( $options_regulamin ) : ?>
-						<a href="<?php echo esc_url( $options_regulamin['url'] ); ?>">Regulamin konkursu</a>
+						<a href="<?php echo esc_url( $options_regulamin['url'] ); ?>">Regulamin turnieju</a>
 					<?php endif; ?>
 					</div>
 				</div><!-- /.row -->
