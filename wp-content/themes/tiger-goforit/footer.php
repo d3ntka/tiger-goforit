@@ -18,7 +18,7 @@
 			<!-- <div class="footer_tiger"> -->
 				<div class="tigerki tigerki_5"></div>
 			<!-- </div> -->
-			<div class="container pt-5 pb-3">
+			<div class="container py-5">
 				<div class="row align-items-center justify-content-center">
 					<div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center">
 						<img class="footer__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_cfa.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
