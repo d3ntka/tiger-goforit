@@ -285,7 +285,7 @@
                     "key": "field_61c08a3adb78f",
                     "label": "data",
                     "name": "quali_date",
-                    "type": "date_picker",
+                    "type": "date_time_picker",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -294,8 +294,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "d.m.Y",
-                    "return_format": "d.m.Y",
+                    "display_format": "d.m H:i",
+                    "return_format": "d.m, H:i",
                     "first_day": 1
                 },
                 {
@@ -334,5 +334,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640632807
+    "modified": 1642612838
 }

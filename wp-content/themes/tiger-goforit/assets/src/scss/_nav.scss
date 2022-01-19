@@ -31,9 +31,34 @@
   z-index: 1000;
 }
 
+.navbar-brand{
+  margin: 0;
+}
 
 @media (min-width: 768px){
   .navbar-expand-md .navbar-collapse-left {
       justify-content: end;
+  }
+  .navbar-expand-md .navbar-collapse{
+    flex-basis: 0;
+  }
+}
+
+.footer__logo{
+  height: 6.9rem;
+}
+
+
+.regulamin {
+  // flex: 0 0 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    color: #fff;
+    text-decoration: underline;
+    &:hover{
+        color: $secondary;
+    }
   }
 }

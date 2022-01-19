@@ -2,7 +2,7 @@ const gulp = require( 'gulp' ),
 	fancylog = require( 'fancy-log' ),
 	browserSync = require( 'browser-sync' ),
 	server = browserSync.create(),
-	dev_url = 'https://tiger-goforit.test';
+	dev_url = 'tiger-goforit.test';
 
 
 /**
