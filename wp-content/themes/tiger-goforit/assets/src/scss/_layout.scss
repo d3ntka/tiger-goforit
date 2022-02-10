@@ -14,12 +14,16 @@
     transform: translateX(-50%);
     height: 100%;
     &--logo {
-      max-width: 100%;
+      width: 100%;
       position: absolute;
       left: 50%;
       top: 40%;
       transform: translate(-50%, -50%);
-      width: 400px;
+      max-width: 320px;
+      @include media-breakpoint-down(md) {
+        transform: translate(-50%, -55%);
+        max-width: 260px;
+      }
     }
     &--influ-1 {
       max-width: 100%;
